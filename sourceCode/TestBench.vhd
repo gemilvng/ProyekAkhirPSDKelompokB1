@@ -34,6 +34,7 @@ begin
             clock <= '1';
             clock_counter <= clock_counter + 1;
             wait for clock_period;
+            signal mode : std_logic_vector (1 downto 0);
 
             -- membiarkan mode idle selama 15 detik
             if(clock_counter = 15) then
