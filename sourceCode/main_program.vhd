@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity main-program is
+entity main_program is
     port (
     clock   : in std_logic;
     tombol  : in std_logic_vector (1 downto 0); -- 00 untuk reset
@@ -11,9 +11,9 @@ entity main-program is
                                                 -- 10 untuk lansia dan carrier, 
                                                 -- 11 untuk tunanetra
     );
-end main-program; 
+end main_program; 
 
-architecture behave of main-program is
+architecture behave of main_program is
     --Component Low Lever Decoder BCD to 7-Segment
     component Decoder is
         port (
