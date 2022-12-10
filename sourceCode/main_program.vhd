@@ -145,6 +145,15 @@ begin
                         clock_count <= 0;                                           --Counter akan direset
 					end if;
 				end if;
+            
+            elsif trigger_60 = '1' then                                             --Jika trigger counter 60 detik menyala, maka counter akan menghitung 60 kali clock cycle
+                if rising_edge(clock) then                                          -- saat clock kondisi naik
+					clock_count <= clock_count + 1;                                 -- counter akan bertambah 1
+					if (clock_count = waktu_menyebrang_lainnya) then                        --Saat counter bernilai sama dengan waktu menyebrang atau 60
+                        clock_count <= 0;                                           --Counter akan direset
+					end if;
+				end if;
+            
             elsif trigger_STM = '1' then
                 if rising_edge(clock) then
                     STM_counter1 <= STM_counter1 + 1;
