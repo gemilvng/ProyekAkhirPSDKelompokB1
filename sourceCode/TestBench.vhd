@@ -43,11 +43,11 @@ begin
                 severity note;
             
             elsif(clock_counter = 20) then
-                tombol <= '01' -- mencoba mode 1
+                tombol <= '10' -- mencoba mode 2
             
             elsif(clock_counter = 35) then
                 tombol <= '11' -- melakukan interupsi dengan mencoba mode 11
-            assert mode = '01'
+            assert mode = '10'
                 report "Tidak dapat melakukan mode tunanetra, silahkan reset terlebih dahulu"
                 severity warning;
             
@@ -56,8 +56,22 @@ begin
             
             elsif(clock_counter = 40) then
                 tombol <= '00' -- melakukan reset sebelum selesai
+
+            elsif(clock_counter = 45) then
+                tombol <= '11' -- mode tunanetra
             
+            elsif(clock_counter = 85) then
+                tombol <= '00' -- melakukan reset sebelum selesai
             
+            elsif(clock_counter = '90') then
+                tombol <= '01'
             
+            elsif(clock_counter = 120) then
+                tombol <= '11'
+            
+            elsif(counter_clock = 190) then
+                wait;
+            end if;
+        end process;
 
 end architecture;
