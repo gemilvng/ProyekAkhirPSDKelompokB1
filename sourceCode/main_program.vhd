@@ -30,7 +30,7 @@ architecture behave of main_program is
     signal trigger_5 : std_logic := '0'; --trigger untuk memulai counter 5 detik
     signal trigger_20 : std_logic := '0'; --trigger untuk memulai counter 20 detik
     signal trigger_60 : std_logic := '0'; -- trigger untuk memulai counter 60
-    signal buzzer : std_logic := '0' -- trigger untuk menyalakan buzzer
+    signal buzzer : std_logic := '0'; -- trigger untuk menyalakan buzzer
     signal trigger_STM : std_logic := '0';
 
     type state is (   --Define State kondisi jalan raya
