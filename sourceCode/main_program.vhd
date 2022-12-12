@@ -90,9 +90,9 @@ begin
                 lampu_penyebrang <= kuning;         
                 trigger_5 <= '1';                                       --Trigger counter 5 detik aktif
                 if((clock_count = waktu_transisi) and (tombol = "01")) then NS <= menyebrang_dewasa;
-                elsif((clock_count = waktu_transisi) and (tombol = "10")) then NS <= menyebrang_lansia
-                elsif((clock_count = waktu_transisi) and (tombol = "11")) then NS <= menyebrang_tunanetra
-                elsif((clock_count = waktu_transisi) and (tombol = "00")) then NS <= state_default   --Setelah counter bernilai sama dengan waktu transisi yaitu 5 maka NS menjadi kondisi menyebrang
+                elsif((clock_count = waktu_transisi) and (tombol = "10")) then NS <= menyebrang_lansia;
+                elsif((clock_count = waktu_transisi) and (tombol = "11")) then NS <= menyebrang_tunanetra;
+                elsif((clock_count = waktu_transisi) and (tombol = "00")) then NS <= state_default;   --Setelah counter bernilai sama dengan waktu transisi yaitu 5 maka NS menjadi kondisi menyebrang
                 end if;
 
             when menyebrang_dewasa =>                  --Kondisi saat pejalan kaki boleh menyebrang dan kendaraan wajib berhenti
