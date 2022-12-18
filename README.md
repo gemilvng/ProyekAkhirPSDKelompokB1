@@ -11,4 +11,5 @@ Adjustable crosswalk lamp yang kami rancang menggunakan model komputasi Finite-s
 
 ## Presentasi
 [Link Video](https://youtu.be/4ehTo6kdSh0)
-![Youtube Thumbnail](https://youtu.be/4ehTo6kdSh0)
+
+![Youtube Thumbnail](https://i3.ytimg.com/vi/4ehTo6kdSh0/maxresdefault.jpg)
